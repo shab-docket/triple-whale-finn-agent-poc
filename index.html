@@ -23,7 +23,7 @@
         <a href="#insights">Resources</a>
         <a href="#try-finn">Talk to Finn</a>
       </nav>
-      <a class="nav-cta" href="#try-finn">See your data clearly</a>
+      <button class="nav-cta open-finn" type="button">Talk to Finn</button>
     </header>
 
     <main id="top">
@@ -35,7 +35,7 @@
             Bring your marketing, store, and customer data together so you can see what matters and act on it.
           </p>
           <div class="hero-actions">
-            <a class="primary-button" href="#try-finn">Talk to Finn</a>
+            <button class="primary-button open-finn" type="button">Talk to Finn</button>
             <a class="text-link" href="#platform">Explore the platform <span aria-hidden="true">→</span></a>
           </div>
         </div>
@@ -89,15 +89,14 @@
           <p class="eyebrow">Meet Finn</p>
           <h2 id="finn-title">Questions about your ecommerce data?</h2>
           <p>Try the agent in chat or voice. Tell Finn what you are trying to understand, and it will help you find the right next step.</p>
-          <p class="agent-note">For testing only. A new conversation starts inside the panel.</p>
+          <button class="primary-button open-finn" type="button">Start a conversation</button>
+          <p class="agent-note">For testing only. Finn opens in the site widget.</p>
         </div>
-        <div class="agent-frame-wrap">
-          <iframe
-            src="https://aiseller.app.docketai.com/508b9c46-572a-4251-8f60-4b465e540b3d"
-            title="Finn, the Triple Whale agent"
-            allow="microphone; autoplay"
-            loading="eager"
-          ></iframe>
+        <div class="agent-card" aria-label="Finn agent test instructions">
+          <p class="agent-card-label">Finn is ready to help</p>
+          <h3>Bring your ecommerce questions.</h3>
+          <p>Ask about measurement, attribution, or getting a clearer picture of your performance.</p>
+          <button class="text-link open-finn" type="button">Open Finn <span aria-hidden="true">→</span></button>
         </div>
       </section>
 
@@ -108,5 +107,24 @@
     </main>
 
     <footer><span>Triple Whale test experience</span><span>Powered by Docket</span></footer>
+    <script>
+      window.AISellerSettings = { agent_id: 'eb72a2a3-0253-412e-a4cd-f93da0749f3f' };
+      (function () {
+        var w = window;
+        if (typeof w.AISeller === 'function') { w.AISeller('update', w.AISellerSettings); return; }
+        var queue = function () { queue.q.push(arguments); };
+        queue.q = [['update', w.AISellerSettings]];
+        w.AISeller = queue;
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://d33t2173eag6fx.cloudfront.net/script/app/inbound-se-script/ai-seller.js';
+        document.head.appendChild(script);
+      })();
+      document.querySelectorAll('.open-finn').forEach(function (button) {
+        button.addEventListener('click', function () {
+          if (window.AISeller && typeof window.AISeller.showAndConnect === 'function') window.AISeller.showAndConnect();
+        });
+      });
+    </script>
   </body>
 </html>
