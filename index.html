@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A test environment for the Triple Whale website agent." />
+    <title>Triple Whale — Finn Agent Test</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="test-banner" role="note">
+      <span>Test environment</span>
+      <p>This is a Docket prototype for trying Finn. It is not the live Triple Whale website.</p>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Triple Whale test page home">
+        <span class="brand-mark" aria-hidden="true">◒</span>
+        <span>triple whale</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#platform">Platform</a>
+        <a href="#insights">Resources</a>
+        <a href="#try-finn">Talk to Finn</a>
+      </nav>
+      <a class="nav-cta" href="#try-finn">See your data clearly</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Ecommerce intelligence, in one place</p>
+          <h1 id="hero-title">Move with confidence.</h1>
+          <p class="lede">
+            Bring your marketing, store, and customer data together so you can see what matters and act on it.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#try-finn">Talk to Finn</a>
+            <a class="text-link" href="#platform">Explore the platform <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <div class="signal-panel" aria-label="Example ecommerce performance overview">
+          <div class="panel-topline">
+            <span>Today’s signal</span>
+            <span class="status"><i></i> Live</span>
+          </div>
+          <p class="metric-label">Blended revenue</p>
+          <p class="metric">$184,260</p>
+          <p class="metric-change">↑ 18.4% from last week</p>
+          <div class="chart" aria-hidden="true">
+            <span style="--h: 30%"></span><span style="--h: 42%"></span><span style="--h: 38%"></span><span style="--h: 56%"></span><span style="--h: 48%"></span><span style="--h: 72%"></span><span style="--h: 63%"></span><span style="--h: 88%"></span><span style="--h: 78%"></span><span style="--h: 98%"></span>
+          </div>
+          <div class="panel-footer"><span>Revenue</span><span>Spend</span><span>MER</span></div>
+        </div>
+      </section>
+
+      <section class="proof-strip" aria-label="Platform outcomes">
+        <p>Get from fragmented data to your next best move.</p>
+        <div><span>01</span> Measure what’s working</div>
+        <div><span>02</span> Find the signal</div>
+        <div><span>03</span> Take action</div>
+      </section>
+
+      <section id="platform" class="platform-section">
+        <p class="eyebrow">Your full picture</p>
+        <h2>One place to see, know, and move.</h2>
+        <div class="feature-grid">
+          <article>
+            <span class="feature-number">01</span>
+            <h3>See the whole business</h3>
+            <p>Connect the channels, store, and customer activity that shape every decision.</p>
+          </article>
+          <article>
+            <span class="feature-number">02</span>
+            <h3>Know what matters</h3>
+            <p>Turn real-time data into a clear view of performance and momentum.</p>
+          </article>
+          <article>
+            <span class="feature-number">03</span>
+            <h3>Move with focus</h3>
+            <p>Give your team the context to make sharper calls, faster.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="try-finn" class="agent-section" aria-labelledby="finn-title">
+        <div class="agent-intro">
+          <p class="eyebrow">Meet Finn</p>
+          <h2 id="finn-title">Questions about your ecommerce data?</h2>
+          <p>Try the agent in chat or voice. Tell Finn what you are trying to understand, and it will help you find the right next step.</p>
+          <p class="agent-note">For testing only. A new conversation starts inside the panel.</p>
+        </div>
+        <div class="agent-frame-wrap">
+          <iframe
+            src="https://aiseller.app.docketai.com/508b9c46-572a-4251-8f60-4b465e540b3d"
+            title="Finn, the Triple Whale agent"
+            allow="microphone; autoplay"
+            loading="eager"
+          ></iframe>
+        </div>
+      </section>
+
+      <section id="insights" class="closing-section">
+        <p class="eyebrow">Built for ambitious brands</p>
+        <h2>Less time reconciling numbers. More time moving forward.</h2>
+      </section>
+    </main>
+
+    <footer><span>Triple Whale test experience</span><span>Powered by Docket</span></footer>
+  </body>
+</html>
